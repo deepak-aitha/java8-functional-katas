@@ -1,13 +1,13 @@
 package katas;
 
 import com.google.common.collect.ImmutableList;
-import model.Movie;
-import model.MovieList;
-import util.DataUtil;
 
 import java.util.List;
 
-/*
+import model.MovieList;
+import util.DataUtil;
+
+/**
     Goal: Use map() and flatMap() to project and flatten the movieLists into an array of video ids (flatMap(c -> c.stream()))
     DataSource: DataUtil.getMovieLists()
     Output: List of Integers

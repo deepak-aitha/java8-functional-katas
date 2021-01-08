@@ -9,7 +9,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-/*
+/**
     Goal: Create a datastructure from the given data:
 
     We have 2 arrays each containing lists, and videos respectively.
@@ -51,9 +51,9 @@ import java.util.Map;
     Output: the given datastructure
 */
 public class Kata10 {
-    public static List<Map> execute() {
-        List<Map> lists = DataUtil.getLists();
-        List<Map> videos = DataUtil.getVideos();
+    public static List<Map<String, Object>> execute() {
+        List<Map<String, Object>> lists = DataUtil.getLists();
+        List<Map<String, Object>> videos = DataUtil.getVideos();
 
         return ImmutableList.of(ImmutableMap.of("name", "someName", "videos", ImmutableList.of(
                 ImmutableMap.of("id", 5, "title", "The Chamber"),

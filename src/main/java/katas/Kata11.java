@@ -7,7 +7,7 @@ import util.DataUtil;
 import java.util.List;
 import java.util.Map;
 
-/*
+/**
     Goal: Create a datastructure from the given data:
 
     This time we have 4 seperate arrays each containing lists, videos, boxarts, and bookmarks respectively.
@@ -57,11 +57,11 @@ import java.util.Map;
     Output: the given datastructure
 */
 public class Kata11 {
-    public static List<Map> execute() {
-        List<Map> lists = DataUtil.getLists();
-        List<Map> videos = DataUtil.getVideos();
-        List<Map> boxArts = DataUtil.getBoxArts();
-        List<Map> bookmarkList = DataUtil.getBookmarkList();
+    public static List<Map<String, Object>> execute() {
+        List<Map<String, Object>> lists = DataUtil.getLists();
+        List<Map<String, Object>> videos = DataUtil.getVideos();
+        List<Map<String, Object>> boxArts = DataUtil.getBoxArts();
+        List<Map<String, Object>> bookmarkList = DataUtil.getBookmarkList();
 
         return ImmutableList.of(ImmutableMap.of("name", "someName", "videos", ImmutableList.of(
                 ImmutableMap.of("id", 5, "title", "The Chamber", "time", 123, "boxart", "someUrl")
