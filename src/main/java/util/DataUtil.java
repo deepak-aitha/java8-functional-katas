@@ -77,7 +77,7 @@ public class DataUtil {
     ]
     */
     public static List<Movie> getMovies() {
-        List<Movie> result = new ArrayList<Movie>();
+        List<Movie> result = new ArrayList<>();
         result.add(new Movie(70111470,
                 "Die Hard",
                 ImmutableList.of(
@@ -86,7 +86,7 @@ public class DataUtil {
                 ),
                 "http://api.netflix.com/catalog/titles/movies/70111470",
                 4.0,
-                new ArrayList<Bookmark>(),
+                new ArrayList<>(),
                 ImmutableList.of(
                         new InterestingMoment("End", new Date()),
                         new InterestingMoment("Middle", new Date()),
@@ -114,7 +114,7 @@ public class DataUtil {
                 ),
                 "http://api.netflix.com/catalog/titles/movies/70111470",
                 4.0,
-                new ArrayList<Bookmark>(),
+                new ArrayList<>(),
                 ImmutableList.of(
                         new InterestingMoment("End", new Date()),
                         new InterestingMoment("Middle", new Date()),
@@ -216,7 +216,7 @@ public class DataUtil {
     ]
     */
     public static List<MovieList> getMovieLists() {
-        List<MovieList> result = new ArrayList<MovieList>();
+        List<MovieList> result = new ArrayList<>();
         result.add(new MovieList("New Releases", getMovies().subList(0, 2)));
         result.add(new MovieList("Dramas", getMovies().subList(2, 4)));
         return result;
