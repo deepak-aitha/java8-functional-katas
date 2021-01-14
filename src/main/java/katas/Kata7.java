@@ -1,12 +1,10 @@
 package katas;
 
-import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import model.Bookmark;
-import model.Movie;
 import model.MovieList;
 import util.DataUtil;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -19,6 +17,6 @@ public class Kata7 {
     public static List<Map<String, ?>> execute() {
         List<MovieList> movieLists = DataUtil.getMovieLists();
 
-        return ImmutableList.of(ImmutableMap.of("id", 5, "title", "Bad Boys", "boxart", "url"));
+        return Arrays.asList(ImmutableMap.of("id", 5, "title", "Bad Boys", "boxart", "url"));
     }
 }

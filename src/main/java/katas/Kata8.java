@@ -1,11 +1,11 @@
 package katas;
 
-import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import model.Bookmark;
 import model.Movie;
 import util.DataUtil;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -21,6 +21,6 @@ public class Kata8 {
 
         // StreamUtils.zip()
 
-        return ImmutableList.of(ImmutableMap.of("videoId", 5, "bookmarkId", 3));
+        return Arrays.asList(ImmutableMap.of("videoId", 5, "bookmarkId", 3));
     }
 }

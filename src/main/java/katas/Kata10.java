@@ -1,13 +1,11 @@
 package katas;
 
-import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import util.DataUtil;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
-
-import static java.util.stream.Collectors.toList;
 
 /**
     Goal: Create a datastructure from the given data:
@@ -55,9 +53,11 @@ public class Kata10 {
         List<Map<String, ?>> lists = DataUtil.getLists();
         List<Map<String, ?>> videos = DataUtil.getVideos();
 
-        return ImmutableList.of(ImmutableMap.of("name", "someName", "videos", ImmutableList.of(
-                ImmutableMap.of("id", 5, "title", "The Chamber"),
-                ImmutableMap.of("id", 3, "title", "Fracture")
-        )));
+        return Arrays.asList(
+                ImmutableMap.of("name", "someName", "videos",
+                        Arrays.asList(
+                                ImmutableMap.of("id", 5, "title", "The Chamber"),
+                                ImmutableMap.of("id", 3, "title", "Fracture")
+                        )));
     }
 }

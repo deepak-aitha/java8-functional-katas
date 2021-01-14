@@ -1,9 +1,9 @@
 package katas;
 
-import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import util.DataUtil;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -63,8 +63,9 @@ public class Kata11 {
         List<Map<String, ?>> boxArts = DataUtil.getBoxArts();
         List<Map<String, ?>> bookmarkList = DataUtil.getBookmarkList();
 
-        return ImmutableList.of(ImmutableMap.of("name", "someName", "videos", ImmutableList.of(
-                ImmutableMap.of("id", 5, "title", "The Chamber", "time", 123, "boxart", "someUrl")
-        )));
+        return Arrays.asList(ImmutableMap.of("name", "someName", "videos",
+                Arrays.asList(
+                        ImmutableMap.of("id", 5, "title", "The Chamber", "time", 123, "boxart", "someUrl")
+                )));
     }
 }
