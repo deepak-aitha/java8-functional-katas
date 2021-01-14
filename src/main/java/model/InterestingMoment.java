@@ -2,6 +2,7 @@ package model;
 
 
 import java.util.Date;
+import java.util.StringJoiner;
 
 public class InterestingMoment {
     private String type;
@@ -30,5 +31,13 @@ public class InterestingMoment {
 
     public void setTime(Date time) {
         this.time = time;
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", InterestingMoment.class.getSimpleName() + "[", "]")
+                .add("type='" + type + "'")
+                .add("time=" + time)
+                .toString();
     }
 }

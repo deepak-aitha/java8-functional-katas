@@ -1,5 +1,7 @@
 package model;
 
+import java.util.StringJoiner;
+
 public class BoxArt {
     private Integer width;
     private Integer height;
@@ -36,5 +38,14 @@ public class BoxArt {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", BoxArt.class.getSimpleName() + "[", "]")
+                .add("width=" + width)
+                .add("height=" + height)
+                .add("url='" + url + "'")
+                .toString();
     }
 }

@@ -1,6 +1,7 @@
 package model;
 
 import java.util.List;
+import java.util.StringJoiner;
 
 public class Movie {
 
@@ -79,5 +80,18 @@ public class Movie {
 
     public void setInterestingMoments(List<InterestingMoment> interestingMoments) {
         this.interestingMoments = interestingMoments;
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", Movie.class.getSimpleName() + "[", "]")
+                .add("id=" + id)
+                .add("title='" + title + "'")
+                .add("boxarts=" + boxarts)
+                .add("uri='" + uri + "'")
+                .add("rating=" + rating)
+                .add("bookmark=" + bookmark)
+                .add("interestingMoments=" + interestingMoments)
+                .toString();
     }
 }
