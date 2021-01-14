@@ -57,11 +57,11 @@ import java.util.Map;
     Output: the given datastructure
 */
 public class Kata11 {
-    public static List<Map<String, Object>> execute() {
-        List<Map<String, Object>> lists = DataUtil.getLists();
-        List<Map<String, Object>> videos = DataUtil.getVideos();
-        List<Map<String, Object>> boxArts = DataUtil.getBoxArts();
-        List<Map<String, Object>> bookmarkList = DataUtil.getBookmarkList();
+    public static List<Map<String, ?>> execute() {
+        List<Map<String, ?>> lists = DataUtil.getLists();
+        List<Map<String, ?>> videos = DataUtil.getVideos();
+        List<Map<String, ?>> boxArts = DataUtil.getBoxArts();
+        List<Map<String, ?>> bookmarkList = DataUtil.getBookmarkList();
 
         return ImmutableList.of(ImmutableMap.of("name", "someName", "videos", ImmutableList.of(
                 ImmutableMap.of("id", 5, "title", "The Chamber", "time", 123, "boxart", "someUrl")

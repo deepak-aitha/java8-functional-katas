@@ -17,7 +17,7 @@ import java.util.Map;
  * Output: List of ImmutableMap.of("id", 5, "title", "some title", "time", new Date(), "url", "someUrl")
  */
 public class Kata9 {
-    public static List<Map<String, Object>> execute() {
+    public static List<Map<String, ?>> execute() {
         List<MovieList> movieLists = DataUtil.getMovieLists();
 
         return ImmutableList.of(ImmutableMap.of("id", 5, "title", "some title", "time", new Date(), "url", "someUrl"));
