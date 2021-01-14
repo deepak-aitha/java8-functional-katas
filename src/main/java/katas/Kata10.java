@@ -51,7 +51,7 @@ import static java.util.stream.Collectors.toList;
     Output: the given datastructure
 */
 public class Kata10 {
-    public static List<Map<String, Object>> execute() {
+    public static List<Map<String, ?>> execute() {
         List<Map<String, ?>> lists = DataUtil.getLists();
         List<Map<String, ?>> videos = DataUtil.getVideos();
 

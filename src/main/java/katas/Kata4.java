@@ -20,7 +20,7 @@ import java.util.Map;
  */
 public class Kata4 {
 
-    public static List<Map<String, Object>> execute() {
+    public static List<Map<String, ?>> execute() {
         List<MovieList> movieLists = DataUtil.getMovieLists();
 
         return ImmutableList.of(ImmutableMap.of("id", 5, "title", "Bad Boys", "boxart", new BoxArt(150, 200, "url")));

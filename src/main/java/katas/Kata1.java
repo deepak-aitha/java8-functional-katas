@@ -10,13 +10,15 @@ import java.util.stream.Collectors;
 import model.Movie;
 import util.DataUtil;
 
+import static java.util.stream.Collectors.toList;
+
 /**
  * Goal: use map() to project an array of videos into an array of {id, title}-pairs
  * DataSource: DataUtil.getMovies()
  * Output: List of ImmutableMap.of("id", "5", "title", "Bad Boys")
  */
 public class Kata1 {
-    public static List<Map<String, Object>> execute() {
+    public static List<Map<String, ?>> execute() {
         List<Movie> movies = DataUtil.getMovies();
 
         return ImmutableList.of(ImmutableMap.of("id", 5, "title", "Bad Boys"));
