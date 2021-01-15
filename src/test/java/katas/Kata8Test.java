@@ -19,5 +19,7 @@ public class Kata8Test {
         assertThat(maps.get(0).get("bookmarkId"), equalTo(470));
         assertThat(maps.get(1).get("videoId"), equalTo(654356453));
         assertThat(maps.get(1).get("bookmarkId"), equalTo(453));
+        assertThat(maps.get(2).get("videoId"), equalTo(65432445));
+        assertThat(maps.get(2).get("bookmarkId"), equalTo(445));
     }
 }
