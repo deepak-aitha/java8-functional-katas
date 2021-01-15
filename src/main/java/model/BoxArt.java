@@ -1,5 +1,6 @@
 package model;
 
+import java.util.Objects;
 import java.util.StringJoiner;
 
 public class BoxArt {
@@ -47,5 +48,25 @@ public class BoxArt {
                 .add("height=" + height)
                 .add("url='" + url + "'")
                 .toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        BoxArt boxArt = (BoxArt) o;
+
+        if (!Objects.equals(width, boxArt.width)) return false;
+        if (!Objects.equals(height, boxArt.height)) return false;
+        return Objects.equals(url, boxArt.url);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = width != null ? width.hashCode() : 0;
+        result = 31 * result + (height != null ? height.hashCode() : 0);
+        result = 31 * result + (url != null ? url.hashCode() : 0);
+        return result;
     }
 }
